@@ -6,6 +6,14 @@ function entrar() {
     area.innerHTML = "Clique no botão para acessar...";
   } else {
     area.innerHTML = "Bem vindo ao sistema de Login " + nome + " ";
-    let botaoSair = documnent.createElement("button");
+    let botaoSair = document.createElement("button");
+    botaoSair.innerText = "Sair da conta";
+    area.appendChild(botaoSair);
+    botaoSair.onclick = sair;
   }
+}
+
+function sair() {
+  alert("Até mais!");
+  area.innerHTML = "Você saiu!";
 }
